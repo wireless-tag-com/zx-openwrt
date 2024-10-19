@@ -96,6 +96,9 @@ mediatek_setup_interfaces()
 	zyxel,ex5601-t0-ubootmod)
 		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3 lan4" eth1
 		;;
+	ZX7981PG)
+		ucidef_set_interfaces_lan_wan "lan2 lan3" wan
+		;;
 	*)
 		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3 lan4" wan
 		;;

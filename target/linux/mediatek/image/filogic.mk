@@ -1153,3 +1153,19 @@ define Device/zyxel_nwa50ax-pro
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += zyxel_nwa50ax-pro
+
+define Device/ZX7981PG
+  DEVICE_VENDOR := ZX
+  DEVICE_MODEL := ZX7981PG
+  DEVICE_DTS := mt7981b-ZX7981PG
+  DEVICE_DTS_DIR := ../dts
+  SUPPORTED_DEVICES += ZX7981PG
+  DEVICE_PACKAGES := kmod-mt7981-firmware mt7981-wo-firmware kmod-usb3
+  UBINIZE_OPTS := -E 5
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  IMAGE_SIZE := 246272k
+  KERNEL_IN_UBI := 1
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += ZX7981PG
